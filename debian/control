@@ -1,0 +1,33 @@
+Source: ruby-puppet-forge
+Section: ruby
+Priority: optional
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Uploaders: Sebastien Badia <seb@sebian.fr>
+Build-Depends: debhelper (>= 9~),
+               gem2deb,
+               rake,
+               ruby-archive-tar-minitar,
+               ruby-faraday (>= 0.9.0),
+               ruby-faraday-middleware (>= 0.9.0),
+               ruby-rspec,
+               ruby-semantic-puppet (>= 0.1.0)
+Standards-Version: 3.9.6
+Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-puppet-forge.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-ruby-extras/ruby-puppet-forge.git
+Homepage: https://github.com/puppetlabs/forge-ruby
+Testsuite: autopkgtest-pkg-ruby
+XS-Ruby-Versions: all
+
+Package: ruby-puppet-forge
+Architecture: all
+XB-Ruby-Versions: ${ruby:Versions}
+Depends: ruby | ruby-interpreter,
+         ruby-archive-tar-minitar,
+         ruby-faraday (>= 0.9.0),
+         ruby-faraday-middleware (>= 0.9.0),
+         ruby-semantic-puppet (>= 0.1.0),
+         ${misc:Depends},
+         ${shlibs:Depends}
+Description: Access the Puppet Forge API from Ruby for resource information and to download releases.
+ Tools that can be used to access Forge API information on Modules, Users, and
+ Releases. As well as download, unpack, and install Releases to a directory.

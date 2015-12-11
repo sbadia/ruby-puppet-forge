@@ -1,0 +1,5 @@
+ruby-puppet-forge (2.1.1-1) UNRELEASED; urgency=medium
+
+  * Initial release (Closes: #nnnn)
+
+ -- Sebastien Badia <seb@sebian.fr>  Fri, 11 Dec 2015 01:53:19 +0100
